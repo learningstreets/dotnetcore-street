@@ -1,0 +1,20 @@
+<h1> Associate Component</h1>
+
+<div class="col-md-12" style="text-align: right;  border-bottom:1px solid black;   padding:5px;"> 
+
+<button type="button" class="btn btn-primary" (click)="AddAssociateBtnEvent()">  Add Associate</button> 
+</div> 
+
+<br>
+
+<grid-content *ngIf="showDataGrid" [gridRawData]="AssociateData" (SendIDForUpdate)="GetIDForUpdate($event)">
+
+</grid-content>
+
+
+<form-content  *ngIf="showFormDialog"  [(visible)]="showFormDialog"
+      [configFormData]="configFormData"
+      [FormHeader]="FormHeader"
+        (submitted)="formSubmitted($event)"
+        (visibleChange)="HideFormDialog($event)"  >
+</form-content>

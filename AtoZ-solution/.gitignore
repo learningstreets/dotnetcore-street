@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Associates/bin/Debug/netcoreapp3.1
+*.dll
+
+*.map.js
+/node_modules
+*/obj/*
+*/Debug/*
+*/Release/*
+/.vs/*
+/.vs/AtoZ-mServices/v16

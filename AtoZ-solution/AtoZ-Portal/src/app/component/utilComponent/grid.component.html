@@ -1,0 +1,52 @@
+
+<div class="col-md-12" *ngIf="loadGrid" style="font-family: arial !important;">
+
+    <b> Result Grid</b> <br>
+<p-table #dt
+[columns]="columns" 
+[value]="gridData" 
+[style]="{'min-height':'400px','height':'400px' }"
+[scrollable]="true" 
+scrollHeight="400px">
+<ng-template pTemplate="caption" let-columns>
+    <div class="col-md-12" style="text-align: right;"> 
+   <button type="button" class="btn btn-primary" (click)="dt.exportCSV({selectionOnly:true})"> Export to CSV </button>
+</div>
+</ng-template>
+
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:250px">
+        </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns"> 
+
+                <span *ngIf="col.header == 'ID'">
+                   <div style="cursor: pointer; color:dodgerblue;;" (click)="SendIDToCallerComponent(rowData)">  {{rowData[col.field]}}  </div>
+                </span>
+
+                <span *ngIf="col.header != 'ID'">
+                    {{rowData[col.field]}}
+                </span>
+                
+            </td>
+        </tr>
+    </ng-template>
+
+</p-table>
+
+</div>
+
+<div *ngIf="!loadGrid">
+<p class="alert alert-danger" [innerHTML]="errorMessage"></p>
+
+</div>

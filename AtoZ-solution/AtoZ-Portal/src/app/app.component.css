@@ -1,0 +1,51 @@
+.home-header{
+
+    background-color: black;
+    color:orange;
+    height: 40%;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.row{
+    margin:0px;
+}
+ 
+.sideBar-btn-a-container{
+
+    position: relative;
+}
+
+
+.sideBar-btn-a
+{
+position: absolute;
+text-decoration: none;
+color: orange;
+bottom: 0;
+right:15px;
+font-size: 22px;
+cursor: pointer;
+transform: rotate(90deg);
+}
+
+.sideBar-btn-a:hover
+{
+    color: orange;
+}
+
+
+
+.home-footer{
+    background-color: rgb(36, 35, 35);
+    color: white;
+   
+    text-align: center;
+    height: 50%;
+    min-height: 50%;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    margin-top: 5em;
+}

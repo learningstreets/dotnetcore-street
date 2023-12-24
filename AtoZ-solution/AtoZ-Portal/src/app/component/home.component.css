@@ -1,0 +1,77 @@
+
+
+
+
+.card-container{
+    background-color: transparent;
+    /* display: inline-block; */
+    margin-top: 50px;
+     
+    }
+    
+    .card-content-container{
+       /* display: inline-block; */
+       height: 200px;
+       max-height: 200px;
+        border: 1px solid lightgray;
+        box-shadow: 0px 5px 3px 0px lightgray;
+        width:100%;
+        text-align: center;
+        padding: 5px;  
+        cursor: pointer;
+        background-color: rgba(248, 248, 248, 0.3);
+      
+         
+    }
+    
+    .card-content-container  label{
+        font-size: 32px;
+        padding-top: 15%; 
+    }
+    
+    .card-description-div{
+       width:100%;
+       display: none;
+    
+    }
+    
+    
+       @keyframes setCardHeading{
+        0%{ font-size: 32px;}
+        100%{padding-top:5%; font-size: 25px;}
+    
+       }
+    
+       @keyframes showCardDescription{
+        0%{margin-top: 30%; opacity: 0;}
+        100%{margin-top: 5%;opacity: 1;}
+    
+       }
+    
+       .card-content-container:hover {
+        color: orange;
+        border: 1px solid black;
+        border-top-color: orange;
+        box-shadow: 0px 5px 3px 0px black;
+       }
+       .card-content-container:hover  label{
+        animation-name: setCardHeading;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+       }
+       
+       .card-content-container:hover  label{
+        animation-name: setCardHeading;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+       }
+    
+       .card-content-container:hover  .card-description-div{
+        color: black;
+        display: inline-block;
+        animation-name: showCardDescription;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+         
+     
+       }

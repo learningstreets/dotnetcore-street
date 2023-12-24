@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  associates:
+    image: ${DOCKER_REGISTRY-}associates
+    build:
+      context: .
+      dockerfile: Associates/Dockerfile

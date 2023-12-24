@@ -1,0 +1,20 @@
+<h1> Project Component</h1>
+
+<div class="col-md-12" style="text-align: right;  border-bottom:1px solid black;   padding:5px;"> 
+
+<button type="button" class="btn btn-primary" (click)="AddProjectBtnEvent()">  Add Project</button> 
+</div> 
+
+<br>
+
+<grid-content *ngIf="showDataGrid" [gridRawData]="ProjectData" (SendIDForUpdate)="GetIDForUpdate($event)">
+
+</grid-content>
+
+
+<form-content  *ngIf="showFormDialog"  [(visible)]="showFormDialog"
+      [configFormData]="configFormData"
+      [FormHeader]="FormHeader"
+        (submitted)="formSubmitted($event)"
+        (visibleChange)="HideFormDialog($event)"  >
+</form-content>

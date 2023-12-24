@@ -1,0 +1,16 @@
+services:
+  associates:
+    build:
+      context: E:\Atul Data\AtoZ Solutions\AtoZ-Repo
+      dockerfile: Associates/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: associates
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\tta\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\tta\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

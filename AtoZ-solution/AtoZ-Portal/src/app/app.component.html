@@ -1,0 +1,55 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="row col-md-12" style="background-color: black;">
+<div class="col-md-1">
+</div>
+<div class="col-md-10 home-header">
+  {{ title }}
+</div>
+<div class="col-md-1 sideBar-btn-a-container" >
+  <a class="sideBar-btn-a"  (click)="display = true" >
+    III
+  </a>
+</div>
+</div>
+
+
+<p-sidebar [(visible)]="display" [style]="{'background-color':'black', 'color':'orange', 'border':'transparent'}" styleClass="ui-sidebar-xs" 
+position="right"
+[baseZIndex]="10000"
+[dismissible]="false" 
+[closeOnEscape]="false"   (SignInUserDetails)="GetUserDetails($event)">
+
+<br>
+<strong> Hello, {{userName}}</strong>
+</p-sidebar>
+
+
+
+<router-outlet></router-outlet>
+
+<footer class="home-footer">
+<div class="row col-md-12">
+
+  
+  <div class="col-md-4" style="text-align: left;">
+Contact Us: <br>
+AtoZSolutions@xyz.com<br>
+9xxxxxxxxx,8xxxxxxxxxx
+  </div>
+  <div class="col-md-4" style="text-align: left;">
+    Site Map: <br>
+    Action 2<br>
+Action 2
+  </div>
+  <div class="col-md-4" style="text-align: left;">
+    Contact Us: <br>
+    AtoZSolutions@xyz.com<br>
+    9xxxxxxxxx,8xxxxxxxxxx
+      </div>
+ 
+</div>
+
+<br><br>
+<p style="color:orange;"> &copy; AtoZ Solutions, 2020 v2.0 </p>
+</footer>
